@@ -113,7 +113,9 @@ DB_NAME=clean_database_name
 
 ## Requirements
 
-This project uses:
+This project requires Python and the dependencies listed in [`requirements.txt`](requirements.txt).
+
+Main libraries used in the project:
 
 - Python
 - pandas
@@ -121,10 +123,12 @@ This project uses:
 - psycopg2
 - python-dotenv
 
-Example installation:
+## Installation
+
+From the project root, install the dependencies with:
 
 ```bash
-pip install pandas sqlalchemy psycopg2-binary python-dotenv
+pip install -r requirements.txt
 ```
 
 ## How To Run
