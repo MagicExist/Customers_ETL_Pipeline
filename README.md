@@ -40,11 +40,11 @@ ETL_Process_PG/
 
 ### 1. Extract
 
-[`extract/extract_customers.py`](/home/johhan/Documents/Program/ETL_Process_PG/extract/extract_customers.py) reads every row from the raw `customers` table into a Pandas DataFrame.
+[`extract/extract_customers.py`](extract/extract_customers.py) reads every row from the raw `customers` table into a Pandas DataFrame.
 
 ### 2. Transform
 
-[`transform/transform_customers.py`](/home/johhan/Documents/Program/ETL_Process_PG/transform/transform_customers.py) applies the cleaning pipeline. It:
+[`transform/transform_customers.py`](transform/transform_customers.py) applies the cleaning pipeline. It:
 
 - converts empty strings and `"NaN"` placeholders to null values
 - removes rows missing required fields such as `full_name`, `email`, or `birth_date`
@@ -59,11 +59,11 @@ ETL_Process_PG/
 
 ### 3. Load
 
-[`load/load_customers.py`](/home/johhan/Documents/Program/ETL_Process_PG/load/load_customers.py) appends the cleaned DataFrame into the destination `customers` table with `DataFrame.to_sql(...)`.
+[`load/load_customers.py`](load/load_customers.py) appends the cleaned DataFrame into the destination `customers` table with `DataFrame.to_sql(...)`.
 
 ### 4. Orchestration
 
-[`main.py`](/home/johhan/Documents/Program/ETL_Process_PG/main.py) runs the full ETL flow in order:
+[`main.py`](main.py) runs the full ETL flow in order:
 
 1. connect to the raw database
 2. extract raw rows
@@ -75,8 +75,8 @@ ETL_Process_PG/
 
 The `sql/` folder contains two schema scripts:
 
-- [`sql/raw_tables.sql`](/home/johhan/Documents/Program/ETL_Process_PG/sql/raw_tables.sql): creates the raw source table and inserts messy sample data
-- [`sql/clean_table.sql`](/home/johhan/Documents/Program/ETL_Process_PG/sql/clean_table.sql): creates the curated destination table with typed columns and a unique constraint on `email`
+- [`sql/raw_tables.sql`](sql/raw_tables.sql): creates the raw source table and inserts messy sample data
+- [`sql/clean_table.sql`](sql/clean_table.sql): creates the curated destination table with typed columns and a unique constraint on `email`
 
 Recommended setup:
 
@@ -87,7 +87,7 @@ Recommended setup:
 
 ## Environment Variables
 
-[`config/db.py`](/home/johhan/Documents/Program/ETL_Process_PG/config/db.py) reads connection settings from a `.env` file.
+[`config/db.py`](config/db.py) reads connection settings from a `.env` file.
 
 Required variables:
 
