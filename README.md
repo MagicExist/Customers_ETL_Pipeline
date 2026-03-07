@@ -2,6 +2,12 @@
 
 Small Python ETL project that extracts customer data from a raw PostgreSQL database, cleans and standardizes it with Pandas, and loads the result into a second PostgreSQL database.
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat)
+![ETL Pipeline](https://img.shields.io/badge/Project-ETL_Pipeline-2F855A?style=flat)
+
 ## What This Project Does
 
 The pipeline is built around one table: `customers`.
